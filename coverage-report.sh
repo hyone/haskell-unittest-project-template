@@ -14,7 +14,7 @@ do
   EXCLUDES="${EXCLUDES} --exclude ${ITEM}"
 done
 
-hpc report ${HPC_TIX_FILE} ${EXCLUDES} --hpcdir=${HPC_MIX_DIR} > ${HPC_REPORT_DIR}/results.xml
 hpc markup ${HPC_TIX_FILE} ${EXCLUDES} --hpcdir=${HPC_MIX_DIR} --destdir=${HPC_REPORT_DIR}
+hpc report ${HPC_TIX_FILE} ${EXCLUDES} --hpcdir=${HPC_MIX_DIR} > ${HPC_REPORT_DIR}/results.xml
 
 open ${HPC_REPORT_DIR}/hpc_index.html
